@@ -20,7 +20,7 @@
 	
 	<style type="text/css">
 		body {
-			background-image: url(images/Quran.jpg) ;
+			background-image: url(Quran.jpg) ;
 			background-position: center fixed;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -36,13 +36,6 @@
 		}
 		h1{
 			color: #008000;
-		}
-		#input-area{
-			  position: fixed;
-			  top: 50%;
-			  left: 50%;
-			  /* bring your own prefixes */
-			  transform: translate(-50%, -50%);
 		}
 	</style>
 </head>
@@ -63,8 +56,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">MORIFREE</a></li>
+        <li><a href="#">HOME <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#">MORIFREE</a></li>
         <li><a href="#">TASBIH</a></li>
         <li><a href="#">PASRAH</a></li>
         <li><a href="#">WORKSHOP</a></li>
@@ -72,61 +65,59 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<section class="main-section">
-	<div id="input-area" class="container-fluid row">
-		<div>
+<section class="main-section row">
+		<div class="container-fluid col-md-4">
 			<h1>Morifree</h1>
 			<form action="">
 				Nama
-				<br>
-				<input type="text" placeholder="Nama" required>
+				
+				<input class="form-control" type="text" placeholder="Nama" required>
 				</input>
-				<br>
+				
 				Tanggal Lahir
-				<br>
-				<input type="text" placeholder="Tanggal Lahir" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				
+				<input class="form-control" type="text" placeholder="Tanggal Lahir" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 				</input>
-				<br>
+				
 				Jumlah Anggota Keluarga yang Didaftarkan
-				<br>
-				<input type="text" placeholder="Jumlah Orang" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				
+				<input class="form-control" type="text" placeholder="Jumlah Orang" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 				</input>
-				<br>
+				
 				Nomer Handphone/Telepon
-				<br>
-				<input type="text" placeholder="Kontak" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				
+				<input class="form-control" type="text" placeholder="Kontak" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 				</input>
-				<br>
+				
 				Alamat Rumah
-				<br>
-				<input type="text" placeholder="Alamat" required>
+				
+				<input class="form-control" type="text" placeholder="Alamat" required>
 				</input>
-				<br>
+				
 				Nomer Kartu Anggota
-				<br>
-				<input type="text" placeholder="No Kartu" required>
+				
+				<input class="form-control" type="text" placeholder="No Kartu" required>
 				</input>
-				<br>
+				
 				Nomer KTP
-				<br>
-				<input type="text" placeholder="No KTP" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				
+				<input class="form-control" type="text" placeholder="No KTP" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 				</input>
-				<br>
+				
 				Nomer Kartu Keluarga
-				<br>
-				<input type="text" placeholder="Nomer KK" required>
+				
+				<input class="form-control" type="text" placeholder="Nomer KK" required>
 				</input>
-				<br>
+				
 				Jumlah Uang Pendaftaran
-				<br>
-				<input type="text" placeholder="Jumlah" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+				
+				<input class="form-control" type="text" placeholder="Jumlah" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 				</input>
-				<br>
-				<br>
-				<button type="submit">Daftar</button>
+				
+				
+				<button class="btn btn-default" type="submit">Daftar</button>
 			</form>
 		</div>
-	</div>
 </section>
 
 </body>
