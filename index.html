@@ -10,20 +10,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 	
 	<style type="text/css">
-	body {
+	.bg-img {
+		z-index: -1;
 		background-image: url(images/Quran.jpg) ;
-		background-position: center fixed;
+		background-position: center no-repeat; 
 		background-size: cover;
-		background-repeat: no-repeat;
-		&:before {
-	    content: '';
-			position: absolute;
-		
-	
-	  }
-
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
 	
+	.responsive {
+		max-width: 100%;
+		padding-top: 10%;
+	
+	}
 	.centered-images {
 		background-color: rgba(7,91,11,0.62);
 		overflow: hidden;
@@ -35,12 +38,14 @@
 	#main-logo{	
 	    display: block;
     	margin: auto;
-    	width: 25%;
-    	padding-top: 12.5%;
+
+
 	}
 	section {
- 		 min-height: 600px;
+ 		 min-height: 620px;
 	}
+
+}
 
 	
 	</style>
@@ -57,12 +62,13 @@
 			    <div class="navbar-header">
 			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
+			        <span class="icon-bar">Nama</span>
+			        <span class="icon-bar">Password</span>
+			        <span class="icon-bar">Masuk</span>
 			      </button>
 			      <a class="navbar-brand" href="#">Brand</a>
 			    </div>
+			    
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,7 +76,7 @@
 			      <form class="navbar-form navbar-right" role="log-in">
 			        <div class="form-group">
 			          <input type="text" class="form-control" placeholder="Nama Pengguna">
-			          <input type="text" class="form-control" placeholder="Password">
+			          <input type="password" class="form-control" placeholder="Password">
 			        </div>
 			        <button type="submit" class="btn btn-default btn-success">Masuk</button>
 			      </form>
@@ -82,8 +88,11 @@
 			
 			<!--Main-->
 			<section class="centered-images">
-				<img src="images/MoriFree.PNG" alt="morifree" id="main-logo">
+				<img src="images/MoriFree.png" alt="morifree" id="main-logo" class="responsive">
+				
 			</section>
+
+			
 		
 		<footer class="nav navbar-fixed-bottom">
 			
