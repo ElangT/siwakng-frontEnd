@@ -13,10 +13,10 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 
 	<script src="https://use.fontawesome.com/e10cd9271c.js"></script>
+
 	
 	<style type="text/css">
 		body {
@@ -32,12 +32,12 @@
 			height: 100%;
 			z-index: 2;
 			margin-top: -20px;
-			min-height: 600px;
+			min-height: 620px;
 		}
 
 	  	#form {
 	  		background-color: white;
-	  		min-height: 600px;
+	  		min-height: 619px;
 	  	}
 	  	#form h1{
 	  		padding-top: 10px;
@@ -70,6 +70,9 @@
         <li><a href="#">PASRAH</a></li>
         <li class="active"><a href="#">WORKSHOP</a></li>
       </ul>
+      <div class="navbar-form navbar-right">
+      	<input type="submit" value="Logout" class="btn btn-success">
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -82,25 +85,25 @@
 			  <div class="form-group">
 			    <label class="control-label col-sm-2" for="Nama-acara">Nama Acara:</label>
 			    <div class="col-sm-10">
-			      <input type="Name" class="form-control" id="Nama-acara" placeholder="Nama Acara">
+			      <input type="Name" class="form-control" id="Nama-acara" placeholder="Nama Acara" required>
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label class="control-label col-sm-2" for="Penyelenggara">Penyelenggara:</label>
 			    <div class="col-sm-10">
-			      <input type="Name" class="form-control" id="Penyelenggara" placeholder="Nama Penyelenggara">
+			      <input type="Name" class="form-control" id="Penyelenggara" placeholder="Nama Penyelenggara" required>
 			    </div>
 			  </div>
 			   <div class="form-group">
 			    <label class="control-label col-sm-2" for="tanggal">Tanggal:</label>
 			    <div class="col-sm-10">
-			      <input type="Uang" class="form-control" id="tanggal" placeholder="DD/MM/YYYY">
+			      <input class= "form-control" type="date" name="Tanggal"  placeholder="Tanggal" required>
 			    </div>
 			  </div>
 			  <div class="form-group">
 			    <label class="control-label col-sm-2" for="biaya">Biaya: Rp</label>
 			    <div class="col-sm-10">
-			      <input type="Uang" class="form-control" id="biaya" placeholder="Contoh : 100000">
+			      <input type="Uang" class="form-control" id="biaya" placeholder="Contoh : 100000" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 			    </div>
 			  </div>
 			  <div class="form-group"> 
@@ -115,6 +118,7 @@
 		</div>
 	</div>
 </section>
-
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
