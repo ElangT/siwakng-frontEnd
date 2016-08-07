@@ -13,30 +13,44 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 
 	<script src="https://use.fontawesome.com/e10cd9271c.js"></script>
 	
 	<style type="text/css">
 		body {
-			background-image: url(Quran.jpg) ;
-			background-position: center fixed;
+			background-image: url(images/Quran.jpg) ;
+			background-position: center;
+			background-position: fixed;
 			background-size: cover;
 			background-repeat: no-repeat;
+	  	}
+
+	  	#form{
+	  		background: white;
+	  	}
+	  	
+	  	#form label {
+	  		padding-top: 5px;
 	  	}
 
 	  	section {
 			background-color: rgba(255,255,255,0.6);
 			overflow: hidden;
 			height: 100%;
-			z-index: 2;
+			z-index: -1;
 			margin-top: -20px;
-			min-height: 600px;
+			min-height: 610px;
 		}
 		h1{
 			color: #008000;
+			text-align: center;
 		}
+		#submit-button {
+			padding-top: 10px;
+		}
+
 	</style>
 </head>
 <body>
@@ -57,68 +71,69 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">HOME <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="#">MORIFREE</a></li>
-        <li><a href="#">TASBIH</a></li>
+        <li><a href="#">MORIFREE</a></li>
+        <li class="active"><a href="#">TASBIH</a></li>
         <li><a href="#">PASRAH</a></li>
         <li><a href="#">WORKSHOP</a></li>
       </ul>
+      <div class="navbar-form navbar-right">
+      	<input type="submit" value="Logout" class="btn btn-success">
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <section class="main-section row">
-		<div class="container-fluid col-md-4">
-			<h1>Morifree</h1>
-			<form action="">
-				Nama
-				
-				<input class="form-control" type="text" placeholder="Nama" required>
-				</input>
-				
-				Tanggal Lahir
-				
-				<input class="form-control" type="text" placeholder="Tanggal Lahir" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-				</input>
-				
-				Jumlah Anggota Keluarga yang Didaftarkan
-				
-				<input class="form-control" type="text" placeholder="Jumlah Orang" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-				</input>
-				
-				Nomer Handphone/Telepon
-				
-				<input class="form-control" type="text" placeholder="Kontak" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-				</input>
-				
-				Alamat Rumah
-				
-				<input class="form-control" type="text" placeholder="Alamat" required>
-				</input>
-				
-				Nomer Kartu Anggota
-				
-				<input class="form-control" type="text" placeholder="No Kartu" required>
-				</input>
-				
-				Nomer KTP
-				
-				<input class="form-control" type="text" placeholder="No KTP" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-				</input>
-				
-				Nomer Kartu Keluarga
-				
-				<input class="form-control" type="text" placeholder="Nomer KK" required>
-				</input>
-				
-				Jumlah Uang Pendaftaran
-				
-				<input class="form-control" type="text" placeholder="Jumlah" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-				</input>
-				
-				
-				<button class="btn btn-default" type="submit">Daftar</button>
-			</form>
+		<div class="col-md-3">	
+		</div>
+		<div class="col-md-6" id="form">
+			<div class="container-fluid">
+				<h1>Daftar Tasbih</h1>
+				<div class="form-group">
+					<form action="">
+						<label>Nama :</label>
+						<input class="form-control" type="text" placeholder="Nama" required></input> 
+						
+						
+						<label> Tanggal Lahir : </label>
+						<input class="form-control" type="date" name="tanggal-lahir" placeholder="Tanggal Lahir" required>
+						
+						
+						<label> Jumlah Anggota Keluarga yang Didaftarkan :</label>
+						<input class="form-control" type="text" placeholder="Jumlah Orang" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required></input> 
+						
+						<label> Nomer Handphone/Telepon :</label>
+						<input class="form-control" type="text" placeholder="Kontak" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+						</input>
+						
+						<label> Alamat Rumah : </label>
+						<input class="form-control" type="text" placeholder="Alamat" required>
+						</input>
+						
+						<label> Nomer Kartu Anggota :</label>
+						<input class="form-control" type="text" placeholder="No Kartu" required>
+						</input>
+						
+						<label> Nomer KTP :</label>
+						<input class="form-control" type="text" placeholder="No KTP" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+						</input>
+						
+						<label> Nomer Kartu Keluarga :</label>
+						<input class="form-control" type="text" placeholder="Nomer KK" required>
+						</input>
+						
+						<label> Jumlah Uang Pendaftaran : </label>
+						<input class="form-control" type="text" placeholder="Jumlah" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+						</input>
+						<div class="row" id="submit-button">
+							<input class="btn btn-success col-sm-offset-10 col-sm-2" type="submit" value="Daftar">
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 </section>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
 </html>
