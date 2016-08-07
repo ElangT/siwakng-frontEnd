@@ -34,32 +34,49 @@
 			background-color: rgba(255,255,255,0.6);
 			overflow: hidden;
 			height: 100%;
-			z-index: 2;
 			margin-top: -20px;
 			min-height: 600px;
 		}
 
 		#textArea {
-	  		color: #008000;
 	  		padding-top: 100px;
+	  		padding-left: auto;
+	  		padding-right: auto; 
 	  	}
 	  	#textArea h1{
 	  		font-weight: bold;
+	  		text-align: center;
+
+	  	}
+	  	#textArea h3{
+	  		text-align: center;
+
 	  	}
 	  	.fa-money{
 	  		font-size: 40px !important;
 	  	}
 	  	#sidebar {
+	  		z-index: 1;
 	  		background-color: #008000;
+	  		opacity: 0.9;
 	  		min-height: 620px;
 	  	}
 	  	#sidebar h3{
-	  		background : white;
-	  		color :#008000;
-	  		margin-top: 30px;
-	  		padding-top: 5px;
-	  		padding-bottom: 5px;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			padding: 20px 10px;
+			text-shadow: 0 0 3px black, 0 0 5px white;
 	  		
+	  	}
+	  	#sidebar h2{
+			text-align: center;
+	  	}
+	  	#sidebar li {
+	  		list-style: none;
+	  	}
+	  	#tempat, #keterangan, #tanggal{
+	  		text-align: center;
 	  	}
 	  	#side-row {
 	  		color: white;
@@ -102,33 +119,50 @@
 <section class="main-section">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3"></div>
-				<div class="col-md-6" id="textArea">
-						<h3 > <i class="fa fa-money" aria-hidden="true"></i> TOTAL UANG:</h3>
-						<h1 ><u>Rp. 999.999.999,-</u></h1>
-						<h3 >Total Pengeluaran		: Rp. 123.456.789,-</h3>
-						<h3 >Total Pemasukan		: Rp. 999.999.999.999,-</h3>
+				<div class="col-md-9" id="textArea">
+
+						<div class="panel panel-success">
+						  <div class="panel-heading"><h1><i class="fa fa-money" aria-hidden="true"></i> TOTAL UANG</h1></div>
+						  <div class="panel-body">
+						   <h1>Rp 999.999.999.999,-</h1>
+						  </div>
+						  <div class="panel-body">
+						    <h3>Pemasukan : Rp 999.000.000,-</h3>
+						  </div>
+						  <div class="panel-body">
+						   	<h3> Pengeluaran : Rp 999.000.000,- </h3>
+						  </div>
+						</div>
 				</div>
 			<div class="col-md-3" id="sidebar">
-				<h3 class="text-center">Upcoming Workshop</h3>
-				<div class="container-fluid">
-					<div id="side-row">
-						<h4><i class="fa fa-circle" aria-hidden="true"></i> Summer Camp</h4>
-						<p><i class="fa fa-calendar" aria-hidden="true"></i> 22 Juni 2016</p>
-						<p><i class="fa fa-map-marker" aria-hidden="true"></i> Fasilkom UI </p>
+				<div id="content">
+					<h3>UPCOMING WORKSHOP</h3>
+					<div class="row">
+					    <div class="thumbnail">
+					      <img src="images/workshop.jpg" alt="workshop">
+					      <div class="caption">
+					        <h2>Seminar</h2>
+					        <ul class="list-group">
+					        	<li class="list-group-">
+					        		<h4><i class="fa fa-calendar" aria-hidden="true"></i> Tanggal :</h4>
+					        		<div id="tanggal">22 June 2015</div>
+					        	</li>
+					        	<li class="list-group-">
+					        		<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Tempat :</h4>
+					        		<div id="tempat">Fasilkom UI</div>
+					        	</li>
+					        	<li class="list-group-">
+					        		<h4><i class="fa fa-comments" aria-hidden="true"></i></i> Keterangan :</h4>
+						        	<div id="keterangan">
+						        		Lorem ipsum Duis ea sunt dolor nulla. Lorem ipsum Eiusmod ad cupidatat amet Excepteur ad exercitation veniam pariatur culpa enim elit sunt.
+						        	</div>
+					        	</li>
+					        </ul>
+					      </div>
+					    </div>
 					</div>
-					<div id="side-row">
-						<h4><i class="fa fa-circle" aria-hidden="true"></i> Lorem ipsum sir amet</h4>
-						<p><i class="fa fa-calendar" aria-hidden="true"></i> 22 Juni 2016</p>
-						<p><i class="fa fa-map-marker" aria-hidden="true"></i> Fasilkom UI </p>
-					</div>
-					<div id="side-row">
-						<h4><i class="fa fa-circle" aria-hidden="true"></i> Judul yang lebih panjang</h4>
-						<p><i class="fa fa-calendar" aria-hidden="true"></i> 22 Juni 2016</p>
-						<p><i class="fa fa-map-marker" aria-hidden="true"></i> Fasilkom UI </p>
-					</div>
-			
 				</div>
+				
 			</div>
 		</div>
 	</div>
