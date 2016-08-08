@@ -13,8 +13,7 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 
 	<script src="https://use.fontawesome.com/e10cd9271c.js"></script>
 	
@@ -32,18 +31,20 @@
 			height: 100%;
 			z-index: 2;
 			margin-top: -20px;
-			min-height: 600px;
+			min-height: 620px;
 		}
 
 	  	#form {
 	  		background-color: white;
-	  		min-height: 600px;
 	  	}
-	  	#form h1{
-	  		padding-top: 10px;
-	  		padding-bottom: 40px;
-	  	}
-
+	  	#submit {
+			padding-top: 10px;
+		}
+		
+		h1{
+			color: #008000;
+			text-align: center;
+		}
 	  	
 	</style>
 </head>
@@ -70,20 +71,23 @@
         <li><a href="#">PASRAH</a></li>
         <li><a href="#">WORKSHOP</a></li>
       </ul>
+      <div class="navbar-form navbar-right">
+      	<input type="submit" value="Logout" class="btn btn-success">
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<section class="main-section">
-	<div class="container-fluid">
-		<div class="row">
+<section class="main-section row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6" id="form">
-			<h1 class="text-center"> INPUT DATA MORIFREE </h1>
+			<div class="container-fluid">
+			<h1 class="text-center">Input Data Morifree</h1>
+			
 			<form class="form-horizontal" role="form">
 			  <div class="form-group">
 			    <label class="control-label col-sm-2" for="Tanggal">Tanggal:</label>
 			    <div class="col-sm-10">
-			      <input type="Tanggal" class="form-control" id="Tanggal" placeholder="DD/MM/YYYY">
+			      <input class="form-control" type="date" id="Tanggal">
 			    </div>
 			  </div>
 			  <div class="form-group">
@@ -93,9 +97,9 @@
 			    </div>
 			  </div>
 			  <div class="form-group">
-			    <label class="control-label col-sm-2" for="Uang">Uang: Rp</label>
+			    <label class="control-label col-sm-2" for="Uang">Uang:</label>
 			    <div class="col-sm-10">
-			      <input type="Uang" class="form-control" id="Uang" placeholder="Contoh : 100000">
+			      <input type="Uang" class="form-control" id="Uang" placeholder="Contoh : 100000" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 			    </div>
 			  </div>
 			  <div class="form-group"> 
@@ -110,16 +114,18 @@
 			  </div>
 			  <div class="form-group"> 
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-success">Submit</button>
+			      <button id="submit" type="submit" class="btn btn-success">Submit</button>
 			    </div>
 			  </div>
 			</form>
 		</div>
-		<div class="col-md-3"></div>
-		
 		</div>
 	</div>
+	<div class="col-md-3"></div>
 </section>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
 </html>
